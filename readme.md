@@ -15,7 +15,7 @@ git clone https://github.com/PeterKitonga/vanillacsslearning.git
 - Navigate to the project and click on the `index.html` file of a lesson
 
 ### Illustration
-![Illustration Example](images/vanillacss_learning_screenshot.png)
+![Illustration Example](assets/images/vanillacss_learning_screenshot.png)
 
 ### Tutorial
 Visit [Code College](https://codecollege.ca) for the tutorial
