@@ -1,0 +1,43 @@
+body {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+/* =====================
+   IMAGES
+   ===================== */
+
+.image {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+}
+
+.image::after {
+    z-index: 1;
+    display: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 300px;
+    padding: 10px 20px 10px 45px;
+    border: dashed 1px #888888;
+    background-color: #f0f0f0;
+    background-image: url(../../../assets/images/noimage.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 15px 10px;
+    /* The attr() function is used to fetch the values of an HTML tag attribute.
+    *  More info: https://css-tricks.com/css-attr-function-got-nothin-custom-properties/
+    */
+    content: "" attr(alt) " Not Found";
+}
