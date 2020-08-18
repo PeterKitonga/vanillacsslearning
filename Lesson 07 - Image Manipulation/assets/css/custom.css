@@ -1,0 +1,95 @@
+body {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+.bg-light img {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.bg-light .img-center {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.bg-light img:hover {
+    cursor: crosshair;
+}
+
+/* =====================
+   GRAYSCALE
+   ===================== */
+
+.grayscale {
+    /* The filter property is used to achieve various visual effects similar to the ones on photoshop (filters) to images.
+    *  These effects include: grayscale, invert, blur, drop-shadow, sepia, contrast, saturate
+    *  More info: https://css-tricks.com/almanac/properties/f/filter/
+    */
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+.grayscale:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+/* =====================
+   BLUR
+   ===================== */
+
+.blur {
+    /* The filter property is used to achieve various visual effects similar to the ones on photoshop (filters) to images.
+    *  These effects include: grayscale, invert, blur, drop-shadow, sepia, contrast, saturate
+    *  More info: https://css-tricks.com/almanac/properties/f/filter/
+    */
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+
+.blur:hover {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+}
+
+/* =====================
+   INVERT
+   ===================== */
+
+.invert {
+    /* The filter property is used to achieve various visual effects similar to the ones on photoshop (filters) to images.
+    *  These effects include: grayscale, invert, blur, drop-shadow, sepia, contrast, saturate
+    *  More info: https://css-tricks.com/almanac/properties/f/filter/
+    */
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.invert:hover {
+    -webkit-filter: invert(0);
+    filter: invert(0);
+}
+
+/* =====================
+   SEPIA
+   ===================== */
+
+.sepia {
+    /* The filter property is used to achieve various visual effects similar to the ones on photoshop (filters) to images.
+    *  These effects include: grayscale, invert, blur, drop-shadow, sepia, contrast, saturate
+    *  More info: https://css-tricks.com/almanac/properties/f/filter/
+    */
+    -webkit-filter: sepia(1);
+    filter: sepia(1);
+}
+
+.sepia:hover {
+    -webkit-filter: sepia(0);
+    filter: sepia(0);
+}
