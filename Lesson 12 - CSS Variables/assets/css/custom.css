@@ -1,0 +1,51 @@
+body {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* =====================
+   VARIABLES
+   ===================== */
+
+.bg-light {
+    --primary-color: orangered;
+    --secondary-color: hotpink;
+    --basic-measurement: 20px;
+}
+
+
+/* =====================
+   BOXES BLUEPRINT
+   ===================== */
+
+.bg-light .box {
+    text-align: center;
+    --text-color: #f3f3f3;
+    /* The var() function in native CSS is used to select variables created with the (--) prefix. */
+    color: var(--text-color);
+    background: var(--primary-color);
+    margin: var(--basic-measurement) auto;
+    /* The calc() property value is a CSS function used for doing basic math.
+    *  More info: https://css-tricks.com/a-complete-guide-to-calc-in-css/
+    */
+    height: calc(var(--basic-measurement) * 10);
+    width: calc(var(--basic-measurement) * 10);
+    line-height: calc(var(--basic-measurement) * 10);
+}
+
+/* =====================
+   BOXES 2 STYLES
+   ===================== */
+
+.bg-light .box2 {
+    background: var(--secondary-color);
+}
