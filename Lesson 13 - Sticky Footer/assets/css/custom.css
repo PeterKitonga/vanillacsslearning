@@ -1,0 +1,47 @@
+body {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+button:focus {
+    outline: none;
+}
+
+.sticky-footer-lesson footer {
+    position: relative;
+    background: #e7eef1;
+    padding: 40px 40px 60px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #333;
+}
+
+/* =====================
+   STICKY FOOTER
+   ===================== */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.page-content {
+    min-height: 100%;
+
+    /* negative value of the margin is same measurement as footer height */
+    margin-bottom: -120px;
+}
+
+.page-content::after {
+    content: "";
+    display: block;
+}
+
+footer, .page-content::after {
+    height: 120px;
+}
