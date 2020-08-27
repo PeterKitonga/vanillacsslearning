@@ -1,0 +1,79 @@
+body {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+button:focus {
+    outline: none;
+}
+
+h1 small {
+    font-size: 3rem;
+    display: block;
+    color: #fa90a3;
+    text-shadow: none;
+}
+
+.sticky-header h1 {
+    width: 60%;
+    max-width: 960px;
+    margin: 0 auto 60px;
+    transform: rotate(-3deg);
+    color: white;
+    text-align: left;
+    font-size: 5rem;
+    line-height: 5rem;
+    text-shadow: 0 1px 0 hsl(52,7%,20%), 0 2px 0 hsl(52,7%,18%), 0 3px 0 hsl(52,7%,16%), 0 4px 0 hsl(52,7%,14%), 0 5px 0 hsl(52,7%,12%), 0 6px 0 hsl(52,7%,10%), 0 7px 0 hsl(52,7%,8%), 0 8px 0 hsl(52,7%,6%), 0 0 5px rgba(0,0,0,.05), 0 1px 3px rgba(0,0,0,.2), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.2), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.3);
+}
+
+/* =====================
+   STICKY HEADER
+   ===================== */
+
+.sticky-header-lesson {
+    margin-top: 200px;
+}
+
+.sticky-header {
+    background: rgba(242, 57, 90, .9);
+    position: fixed;
+    top: 0;
+    height: 180px;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    transition: all .1s ease-in-out;
+}
+
+.sticky-header h1 {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    margin: 0 auto;
+}
+
+.sticky-header h1 small {
+    font-size: 2rem;
+}
+
+/* =====================
+   STICKY HEADER SCROLLED
+   ===================== */
+
+.sticky-header-scrolled {
+    height: 90px !important;
+}
+
+.sticky-header-scrolled h1 {
+    font-size: 1.8rem;
+    line-height: 1.2rem;
+    margin: 0 auto;
+}
+
+.sticky-header-scrolled h1 small {
+    font-size: 1rem;
+}
