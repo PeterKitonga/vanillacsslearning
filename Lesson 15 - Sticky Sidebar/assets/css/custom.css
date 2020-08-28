@@ -1,0 +1,46 @@
+body {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* =====================
+   STICKY SIDEBAR
+   ===================== */
+
+.sticky-sidebar-lesson {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sticky-sidebar-lesson::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.sticky-sidebar-lesson .page-content {
+    width: 60%;
+    float: left;
+}
+
+.sticky-sidebar {
+    background: #e7eef1;
+    padding: 40px 40px 60px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    box-shadow: 0 12px 0 -6px #fa90a3;
+    position: fixed;
+    right: 5%;
+    width: 36%; 
+    float: right;
+    margin-top: 1rem;
+}
