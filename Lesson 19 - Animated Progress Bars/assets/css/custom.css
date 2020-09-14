@@ -1,0 +1,147 @@
+body {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* =====================
+   PROGRESS BARS
+   ===================== */
+
+.animation-bar-1 {
+    position: relative;
+    display: block;
+    line-height: 16px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25), 0 1px 0 rgba(255, 255, 255, .8);
+}
+
+.animation-bar-1 span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+    background-color: #F56982;
+    background-size: 100%;
+    background-image: linear-gradient(to bottom, #F2395A, #B90C2B);
+    animation: progress-bar-1 6s infinite ease;
+}
+
+.animation-bar-1 span::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-size: 100%;
+    background-image: linear-gradient(
+        45deg, 
+        #FFFFFF 25%,
+        rgba(0, 0, 0, 0) 25%,
+        rgba(0, 0, 0, 0) 50%,
+        #FFFFFF 50%,
+        #FFFFFF 75%,
+        rgba(0, 0, 0, 0) 75%,
+        rgba(0, 0, 0, 0)
+    );
+    background-size: 30px 30px;
+    opacity: .3;
+    animation: progress-bar-1-after .5s infinite linear;
+}
+
+@keyframes progress-bar-1 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes progress-bar-1-after {
+    0% {
+        /*
+        * This property allows you to move a background image or gradient around within its container. Default values(x y) are 0 0
+        * which is the top left of the container.
+        * More info: https://css-tricks.com/almanac/properties/b/background-position/
+        */
+        background-position: 0 100%;
+    }
+
+    100% {
+        background-position: 30px 100%;
+    }
+}
+
+.animation-bar-2 {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    background: rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25), 0 1px 0 rgba(255, 255, 255, .8);
+}
+
+.animation-bar-2 span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    background-color: #00E6E7;
+    background-size: 100%;
+    background-image: linear-gradient(to bottom, #00B3B4, #008081);
+    animation: progress-bar-2 8s infinite ease;
+}
+
+.animation-bar-2 span::before {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 5px);
+    z-index: 1;
+    display: inline-block;
+    content: attr(data-label);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: .8em;
+    background-color: rgba(0, 0, 0, 1);
+    color: #FFFFFF;
+}
+
+.animation-bar-2 span::after {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-top-color: rgba(0, 0, 0, 1);
+    content: "";
+}
+
+@keyframes progress-bar-2 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
