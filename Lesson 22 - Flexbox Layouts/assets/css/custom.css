@@ -1,0 +1,169 @@
+body {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+button:focus {
+    outline: none;
+}
+
+.bg-light section {
+    position: relative;
+}
+
+.bg-light section header, .bg-light section article, .bg-light section nav, .bg-light section aside, .bg-light section footer, .bg-light section .logo, .bg-light section .articles {
+    font-size: 1rem;
+}
+
+.bg-light section header, .bg-light section article, .bg-light section nav, .bg-light section aside, .bg-light section footer, .bg-light section .logo, .bg-light section .articles {
+    background: rgba(140, 204, 231, 0.2);
+    border: solid 1px rgba(140, 204, 231, 0.3);
+    padding: 2%;
+    margin: 0 0 2%;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.bg-light section ul {
+    list-style: none;
+}
+
+.bg-light section ul li {
+    display: inline-block;
+    margin: 0 2% 0 0;
+}
+
+.bg-light code {
+    background: #fd6000;
+    color: white;
+    padding: 4px 6px;
+    font-family: 'Nova Mono', monospace;
+    font-size: 1rem;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 2px #5e2400;
+    display: inline-block;
+}
+
+/* =====================
+   FLEXBOX
+   ===================== */
+
+.layout1 main {
+    /*
+    * The 'flex' value is used to tell the browser that this element is a flex container.
+    */
+    display: flex;
+    /*
+    * This property defines the direction flex items are placed in the flex container. This
+    * property has 4 values namely: row, row-reverse, column and column-reverse. 
+    * More info: https://css-tricks.com/almanac/properties/f/flex-direction/
+    */
+    flex-direction: row;
+}
+
+.layout1 article {
+    /*
+    * The flex property is a shorthand property with parameters of flex-grow, flex-shrink and flex-basis respectively. The
+    * last two parameters are optional.
+    * More info: https://css-tricks.com/almanac/properties/f/flex/
+    */
+    flex: 1 58%;
+    margin-right: 2% !important;
+}
+
+.layout2 header {
+    display: flex;
+    flex-direction: row;
+}
+
+.layout2 header nav {
+    flex: 1;
+    margin-left: 2% !important;
+}
+
+.layout2 main {
+    display: flex;
+    flex-direction: row;
+}
+
+.layout2 article {
+    flex: 1 56%;
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+}
+
+.layout2 aside.sidenav,
+.layout2 aside.sidebar {
+    flex: 1 20%;
+}
+
+.layout3 header {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.layout3 header nav {
+    flex: 1;
+    margin-right: 2% !important;
+}
+
+.layout3 .articles {
+    display: flex;
+    flex-direction: row;
+}
+
+.layout3 article {
+    flex: 1;
+    margin: 0 2% !important;
+}
+
+.layout3 article:first-child,
+.layout3 article:last-child {
+    margin: 0 !important;
+}
+
+/* =====================
+   MEDIA QUERIES
+   ===================== */
+
+@media screen and ( max-width: 768px ) {
+    .layout1 main, 
+    .layout1 article, 
+    .layout1 aside, 
+    .layout1 header, 
+    .layout1 header nav, 
+    .layout1 .logo, 
+    .layout1 .sidenav, 
+    .layout1 .sidebar, 
+    .layout1 .articles,
+    .layout2 main, 
+    .layout2 article, 
+    .layout2 aside, 
+    .layout2 header, 
+    .layout2 header nav, 
+    .layout2 .logo, 
+    .layout2 .sidenav, 
+    .layout2 .sidebar, 
+    .layout2 .articles,
+    .layout3 main, 
+    .layout3 article, 
+    .layout3 aside, 
+    .layout3 header, 
+    .layout3 header nav, 
+    .layout3 .logo, 
+    .layout3 .sidenav, 
+    .layout3 .sidebar, 
+    .layout3 .articles {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        margin-bottom: 2% !important;
+    }
+}
