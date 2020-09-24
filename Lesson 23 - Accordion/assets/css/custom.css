@@ -41,10 +41,17 @@ button:focus {
 }
 
 /*
-* The :target pseudo selector in CSS matches when the hash in the URL and the id of an element are the same.
+* Here we can use the :target pseudo selector to toggle the accordion like so:
+*
+* .accordion .accordion__content:target {
+*     height: 150px;
+* }
+*
+* The :target pseudo selector in CSS matches when the hash in the URL and the id of 
+* an element are the same.
 * More info: https://css-tricks.com/almanac/selectors/t/target/
 */
-.accordion .accordion__content:target {
+.accordion .accordion__content.accordion__toggled {
     height: 150px;
 }
 
