@@ -1,0 +1,48 @@
+body {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+button:focus {
+    outline: none;
+}
+
+.bg-light .circle-center {
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+/* =====================
+   SUPPORTS RULE
+   ===================== */
+
+.circle {
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+}
+
+/*
+* The @supports feature tests if the browser supports a particular property or 
+* property: value combination before applying a block of styles.
+* More info: https://css-tricks.com/how-supports-works/
+*/
+@supports (border-radius: 100px) {
+    .circle {
+        border-radius: 100px;
+    }
+}
+
+/* =====================
+   MEDIA QUERIES
+   ===================== */
+
+
