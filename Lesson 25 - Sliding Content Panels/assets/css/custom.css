@@ -1,0 +1,91 @@
+body {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+button:focus {
+    outline: none;
+}
+
+.slide-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* =====================
+   SLIDING PANELS
+   ===================== */
+
+.slide {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.slide img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.slide-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    /*
+    * The align-items property affects how elements are aligned
+    * in flexbox and grid layouts. In flexbox there are 5 possible
+    * values: flex-start | flex-end | center | baseline | stretch
+    * More info: https://css-tricks.com/almanac/properties/a/align-items/
+    */
+    align-items: center;
+    /*
+    * The justify-content property helps distribute extra free space leftover
+    * when either all the flex items on a line are inflexible, or are flexible
+    * but have reached their maximum size.
+    * More info: https://css-tricks.com/almanac/properties/j/justify-content/
+    */
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(225, 35, 69, .9);
+    padding: 20px;
+    color: white;
+    box-sizing: border-box;
+    transition: transform .3s ease;
+}
+
+.slide:hover .slide-content {
+    transform: translate(0, 0);
+}
+
+.slide-top .slide-content {
+    transform: translate(0, -100%);
+}
+
+.slide-right .slide-content {
+    transform: translate(100%, 0);
+}
+
+.slide-bottom .slide-content {
+    transform: translate(0, 100%);
+}
+
+.slide-left .slide-content {
+    transform: translate(-100%, 0%);
+}
+
+/* =====================
+   MEDIA QUERIES
+   ===================== */
+
+
