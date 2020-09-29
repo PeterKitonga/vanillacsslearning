@@ -1,0 +1,80 @@
+body {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+button:focus {
+    outline: none;
+}
+
+.layers-center {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+/* =====================
+   3D LAYERS
+   ===================== */
+
+.layers {
+    position: relative;
+    min-height: 640px;
+    max-width: 360px;
+}
+
+.layers img {
+    position: absolute;
+    max-width: 100%;
+    height: 100%;
+    transition: all 1600ms ease;
+    /*
+    * The transform-style property, when applied to an element, determines 
+    * if that element’s children are positioned in 3D space, or flattened.
+    * More info: https://css-tricks.com/almanac/properties/t/transform-style/
+    */
+    transform-style: preserve-3d;
+}
+
+.layers img.mid {
+    width: 320px;
+    left: 20px;
+}
+
+.layers img.top {
+    width: 300px;
+    left: 30px;
+    top: -5px;
+}
+
+.layers img.tippy {
+    width: 260px;
+    left: 50px;
+    top: -150px;
+}
+
+.layers:hover img {
+    transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(180px);
+}
+
+.layers:hover img.mid {
+    transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(240px);
+}
+
+.layers:hover img.top {
+    transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(280px);
+}
+
+.layers:hover img.tippy {
+    transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(260px);
+}
+
+/* =====================
+   MEDIA QUERIES
+   ===================== */
+
+
