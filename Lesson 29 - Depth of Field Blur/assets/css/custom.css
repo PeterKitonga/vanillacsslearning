@@ -1,0 +1,53 @@
+body {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+button:focus {
+    outline: none;
+}
+
+.bg-light .gallery-center {
+    max-width: 704px;
+    margin: 0 auto;
+}
+
+/* =====================
+   BLUR EFFECT
+   ===================== */
+
+.depth-gallery {
+    position: relative;
+    display: inline-block;
+}
+
+.depth-gallery img {
+    margin: 2px;
+    width: 345px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: solid 7px white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    transition: filter .3s linear, transform .3s linear;
+}
+
+.depth-gallery:hover img {
+    filter: blur(2px);
+    transform: scale(.9);
+}
+
+.depth-gallery img:hover {
+    filter: blur(0);
+    transform: scale(1);
+}
+
+/* =====================
+   MEDIA QUERIES
+   ===================== */
+
+
